@@ -1,0 +1,134 @@
+body {
+    background-color: gray;
+}
+
+/* ------------------------------- */
+/* Navbar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Styling for Navbar buttons */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: darkslategray;
+}
+
+/* ------------------------------- */
+/* HOME PAGE */
+
+/* Project title */
+.header {
+    padding: 20px;
+    text-align: center;
+    /* background: rgb(48, 48, 160); */
+    background-image: url("../data/banner.jpg");
+    color: yellow;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+/* Info panel below header */
+.about {
+    padding: 20px;
+    text-align: center;
+    background: darkslategray;
+    /* background-image: url("../data/banner2.jpg"); */
+    color: white;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+/* ------------------------------- */
+/* EXOPLANET PAGE */
+
+svg {
+    background-color: white;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 65px;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s; /* Used for slow color transition */
+}
+
+/* Sidebar link handle (a is included for escape button) */
+.sidebar input, a {
+    padding: 8px 8px 8px 32px;
+    background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    text-align: left;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+	border: none;
+    transition: 0.3s;
+}
+
+.sidebar input:hover, .openbtn:hover, a:hover {
+    color: slategray;
+}
+
+/* Position and style the escape button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Attributes button */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    transition: 0.2s;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main{
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+#main button {
+    margin-bottom: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar button {
+        font-size: 18px;
+    }
+}

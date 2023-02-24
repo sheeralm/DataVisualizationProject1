@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project 1: Out of This World</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- D3 bundle -->
+    <script src="../js/d3.v6.min.js"></script>
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="info.html">Information</a>
+    </div>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <input type="button" onclick="setActive('allData');" value="All Data" />
+        <input type="button" onclick="setActive('numStars');" value="Number of Stars" />
+        <input type="button" onclick="setActive('numPlanets');" value="Number of Planets" />
+        <input type="button" onclick="setActive('starType');" value="Star Type" />
+        <input type="button" onclick="setActive('discoveryMethod');" value="Discovery Method" />
+        <input type="button" onclick="setActive('habitablity');" value="Habitability" />
+        <input type="button" onclick="setActive('distance');" value="Distance from Earth" />
+        <input type="button" onclick="setActive('timeSinceDiscovery');" value="Time Since Discovery" />
+        <input type="button" onclick="setActive('radvsmass');" value="Radius vs Mass" />
+    </div>
+    
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776; Attributes</button>
+        <div id = "allDataContainer">
+            <h1 style="background-color: aliceblue;">ALL DATA</h1>
+        </div>
+        <div id = "numStarsContainer">
+            <div id="numStars"></div>
+        </div>
+        <div id = "numPlanetsContainer">
+            <div id="numPlanets"></div>
+        </div>
+        <div id = "starTypeContainer">
+            <div id="starType"></div>
+        </div>
+        <div id = "discoveryMethodContainer">
+            <h1 style="background-color: aliceblue;">discoveryMethod</h1>
+        </div>
+        <div id = "habitablityContainer">
+            <h1 style="background-color: aliceblue;">habitablity</h1>
+        </div>
+        <div id = "distanceContainer">
+            <h1 style="background-color: aliceblue;">distance</h1>
+        </div>
+        <div id = "timeSinceDiscoveryContainer">
+            <h1 style="background-color: aliceblue;">timeSinceDiscovery</h1>
+        </div>
+        <div id = "radvsmassContainer">
+            <h1 style="background-color: aliceblue;">radvsmass</h1>
+        </div>
+    </div>
+    <script src="../js/exoplanets.js"></script>
+    <!-- Create a div where the graph will take place -->
+    <div id="my_dataviz"></div>
+    
+
+    <!-- Our JS code -->
+    <script src="../js/sideBar.js"></script>
+</body>
+</html>
