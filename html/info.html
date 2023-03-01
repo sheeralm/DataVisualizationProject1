@@ -1,20 +1,76 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Project 1: Out of This World</title>
     <meta charset="UTF-8">
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
+    <script src="../js/d3.v6.min.js"></script>
+    <script src="../js/dropDown.js"></script>
     <div class="navbar">
         <a href="../index.html">Home</a>
         <a href="exoplanets.html">Exoplanets</a>
-    </div> 
-    
-    <!-- D3 bundle -->
-    <script src="../js/d3.v6.min.js"></script>
+    </div>
 
-    <!-- Our JS code -->
+    <div class="header">
+        <h2>Information Over Visualized Data</h2>
+    </div>
+
+    <div class="info">
+        <button type="button" class="collapsible">Number of Stars in a System</button>
+        <div class="content">
+            <a href="https://universe.nasa.gov/stars/multiple-star-systems/" target="_blank">Multiple Star Systems</a>
+            <a href="https://www.universetoday.com/132154/multiple-star-systems/" target="_blank">Brief Video and Article on Multi-Star Systems</a>
+            <a href="https://en.wikipedia.org/wiki/Star_system" target="_blank">Star System Wikipedia Page</a>
+        </div>
+        <button type="button" class="collapsible">Number of Planets in a System</button>
+        <div class="content">
+            <a href="https://skyandtelescope.org/astronomy-resources/solar-system-planets-how-many-are-there/" target="_blank">Number of Planets within our Solar System</a>
+            <a href="https://bigthink.com/starts-with-a-bang/planets-universe/" target="_blank">Article on Number of Planets within the Universe</a>
+            <a href="https://en.wikipedia.org/wiki/Stellar_classification" target="_blank">Wikipedia Article on Classification</a>
+        </div>
+        <button type="button" class="collapsible">Star Types</button>
+        <div class="content">
+            <a href="https://astrobackyard.com/types-of-stars/" target="_blank">Star Type Breakdown</a>
+            <a href="https://universe.nasa.gov/stars/types/" target="_blank">NASA Star Type Breakdown</a>
+            <a href="https://en.wikipedia.org/wiki/List_of_exoplanet_extremes" target="_blank">Wikipedia list of Exoplanet Extremes (Including Most Planets (8))</a>
+        </div>
+        <button type="button" class="collapsible">Discovery Methods</button>
+        <div class="content">
+            <a href="https://sci.esa.int/web/exoplanets/-/60655-detection-methods" target="_blank">Exoplanet Detection Methods</a>
+            <a href="https://exoplanets.nasa.gov/alien-worlds/ways-to-find-a-planet/" target="_blank">NASA 5 Ways to Find a Planet</a>
+            <a href="https://en.wikipedia.org/wiki/Methods_of_detecting_exoplanets" target="_blank">Wikipedia Article on Methods for Detecting Exoplanets</a>
+        </div>
+        <button type="button" class="collapsible">Habitability</button>
+        <div class="content">
+            <a href="https://www.britannica.com/science/habitable-zone" target="_blank">Exoplanet Habitable Zone</a>
+            <a href="https://exoplanets.nasa.gov/search-for-life/habitable-zone/" target="_blank">NASA Habitability Zone</a>
+            <a href="https://en.wikipedia.org/wiki/List_of_potentially_habitable_exoplanets" target="_blank">Wikipedia List of Potentially Habitable Exoplanets</a>
+        </div>
+        <button type="button" class="collapsible">Distance from Earth</button>
+        <div class="content">
+            <a href="https://www.space.com/30172-six-most-earth-like-alien-planets.html" target="_blank">10 Most Earth-Like Exoplanets</a>
+            <a href="https://www.sciencealert.com/kepler-s-data-most-distant-planet-detection-is-a-jupiter-twin-17-000-light-years-away" target="_blank">Most Distant Exoplanet Ever Found by Kepler</a>
+            <a href="https://en.wikipedia.org/wiki/List_of_nearest_exoplanets" target="_blank">Wikipedia List of Closest Exoplanets to Earth</a>
+        </div>
+        <button type="button" class="collapsible">Time Since Discovery</button>
+        <div class="content">
+            <a href="https://astronomy.com/news/2019/10/how-the-first-exoplanets-were-discovered" target="_blank">First Exoplanet Discovery</a>
+            <a href="https://exoplanets.nasa.gov/alien-worlds/historic-timeline/#first-planetary-disk-observed" target="_blank">NASA Exoplanet Discovery Timeline</a>
+            <a href="https://en.wikipedia.org/wiki/Discoveries_of_exoplanets" target="_blank">Wikipedia Article on Timeframes for Discoveries of Exoplanets</a>
+        </div>
+        <button type="button" class="collapsible">Relationship Between Radius and Mass</button>
+        <div class="content">
+            <a href="https://www.aanda.org/articles/aa/full_html/2020/07/aa36916-19/aa36916-19.html" target="_blank">Free Scientific Paper Covering Planetary Mass-Radius Relationships Across the Galaxy</a>
+            <a href="https://www.planetary.org/space-images/mass-radius-diagram-tpr-2019-1" target="_blank">A Comparison of Mass and Radius for Discovered Planets</a>
+            <a href="https://en.wikipedia.org/wiki/Planetary_mass" target="_blank">Wikipedia Article on Planetary Mass</a>
+        </div>
+    </div>
+    <script src="../js/dropDown.js"></script>
 </body>
+
 </html>

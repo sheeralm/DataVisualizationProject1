@@ -1,5 +1,5 @@
 body {
-    background-color: gray;
+    background-color: black;
 }
 
 /* ------------------------------- */
@@ -39,7 +39,7 @@ body {
 }
 
 /* Info panel below header */
-.about {
+.about, .about a {
     padding: 20px;
     text-align: center;
     background: darkslategray;
@@ -47,6 +47,54 @@ body {
     color: white;
     font-size: 40px;
     font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+/* ------------------------------- */
+/* INFORMATION PAGE */
+
+.info a {
+    background-color: #333;;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 25px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+    background-color: slategray;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #333;
+    color: white;
+}
+
+.collapsible:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    background-color: #333;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
 }
 
 /* ------------------------------- */
@@ -67,24 +115,25 @@ svg {
     background-color: #333;
     overflow-x: hidden;
     padding-top: 60px;
-    transition: 0.5s; /* Used for slow color transition */
+    transition: 0.5s;
+    /* Used for slow color transition */
 }
 
 /* Sidebar link handle (a is included for escape button) */
 .sidebar input, a {
     padding: 8px 8px 8px 32px;
     background: none;
-	color: inherit;
-	border: none;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
     text-align: left;
     text-decoration: none;
     font-size: 25px;
     color: white;
     display: block;
-	border: none;
+    border: none;
     transition: 0.3s;
 }
 
@@ -113,13 +162,18 @@ svg {
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main{
+#main {
     transition: margin-left .5s;
     padding: 20px;
 }
 
 #main button {
     margin-bottom: 20px;
+}
+
+#main h3, a {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
