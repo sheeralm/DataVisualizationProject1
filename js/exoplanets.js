@@ -1,6 +1,13 @@
+/*
+Program that utilizes d3 in order to generate visualizations for exoplanet data. Lots of code was inspired and based on similar examples found on W3Schools
+Liam Sheerajin - sheeralm - M12810246
+*/
+
+/* Immediately generates data and hides all generated graphs */
 generateData();
 hideAll();
 
+/* Fucntion used to generate data */
 function generateData() {
     generateNumStars();
     generateNumPlanets();
@@ -12,6 +19,7 @@ function generateData() {
     generateRadiusVsMass();
 }
 
+/* Generates number of stars within a system graph */
 function generateNumStars() {
     // Load in data
     dataCsv = d3.csv("../data/exoplanets-1.csv");
@@ -78,13 +86,15 @@ function generateNumStars() {
             .data(d3.rollups(data, g => g.length, d => d.sy_snum))
             .enter();
 
+        //Visual
         bars.append("rect")
             .attr("x", x(0))
             .attr("y", function (d) { return y(d[0]); })
             .attr("width", function (d) { return x(d[1]); })
             .attr("height", y.bandwidth())
             .attr("fill", "#69b3a2");
-
+        
+        //Counts
         bars.append("text")
             .text(function (d) {
                 return d[1];
@@ -98,6 +108,7 @@ function generateNumStars() {
     });
 }
 
+/* Generates number of planets within a system graph */
 function generateNumPlanets() {
     // Load data
     dataCsv = d3.csv("../data/exoplanets-1.csv");
@@ -166,6 +177,7 @@ function generateNumPlanets() {
             .data(d3.rollups(data, g => g.length, d => d.sy_pnum))
             .enter();
 
+        //Visual
         bars.append("rect")
             .attr("x", x(0))
             .attr("y", function (d) { return y(d[0]); })
@@ -173,6 +185,7 @@ function generateNumPlanets() {
             .attr("height", y.bandwidth())
             .attr("fill", "#69b3a2");
 
+        //Counts
         bars.append("text")
             .text(function (d) {
                 return d[1];
@@ -186,6 +199,7 @@ function generateNumPlanets() {
     });
 }
 
+/* Generates star type system graph */
 function generateStarType() {
     // Load data
     dataCsv = d3.csv("../data/exoplanets-1.csv");
@@ -287,6 +301,7 @@ function generateStarType() {
     });
 }
 
+/* Generates discovery method graph */
 function generateDiscoveryMethod() {
     // Load data
     dataCsv = d3.csv("../data/exoplanets-1.csv");
@@ -374,6 +389,7 @@ function generateDiscoveryMethod() {
     });
 }
 
+/* Generates distance from Earth graph */
 function generateDistance() {
     // Load data
     dataCsv = d3.csv("../data/exoplanets-1.csv");
@@ -463,6 +479,7 @@ function generateDistance() {
     });
 }
 
+/* Applies test over .csv data to determine which planets are habitable or not. Returns a 2D array - first dimension for star type and second contains results for inhabitable and habitable */
 function habitabilityTest(data) {
     let retArray = [];
     let tempVal = [0, 0];
@@ -493,6 +510,7 @@ function habitabilityTest(data) {
     return retArray;
 }
 
+/* Generates graph for exoplanet habitability */
 function generateHabitability() {
     // Load data
     dataCsv = d3.csv("../data/exoplanets-1.csv");
@@ -564,6 +582,7 @@ function generateHabitability() {
             .attr("y", function (d) {
                 let inhab = d[1][0];
                 let hab = d[1][1];
+                // Nested bar append to generate habitable and inhabitable simultaniously
                 bars.append("rect")
                     .attr("x", x(0))
                     .attr("y", y(d[0] + "-" + hab[0]))
@@ -600,6 +619,7 @@ function generateHabitability() {
     });
 }
 
+/* Generates graph for time since exoplanet discovery */
 function generateTimeSinceDiscovery() {
     // Load data
     dataCsv = d3.csv("../data/exoplanets-1.csv");
@@ -700,6 +720,7 @@ function generateTimeSinceDiscovery() {
     });
 }
 
+/* Generates graph for exoplanet radius vs mass */
 function generateRadiusVsMass() {
     // Load data
     dataCsv = d3.csv("../data/exoplanets-1.csv");
@@ -773,6 +794,7 @@ function generateRadiusVsMass() {
     });
 }
 
+/* Reacts to buttons presses trying to change graphs, revealing the new and hiding the old */
 function setActive(str) {
     switch (str) {
         case "numStars":
@@ -810,6 +832,7 @@ function setActive(str) {
     }
 }
 
+/* Hides all graph containers */
 function hideAll() {
     document.getElementById("numStarsContainer").hidden = true;
     document.getElementById("numPlanetsContainer").hidden = true;
@@ -821,19 +844,3 @@ function hideAll() {
     document.getElementById("radvsmassContainer").hidden = true;
     return;
 }
-// pl_name, sys_name, sys_snum, sys_pnum, st_spectype, discoverymethod, sy_dist, disc_year, pl_rade, pl_bmasse
-// data = d3.csv("../data/exoplanets-1.csv", function (d) {
-//     let columns = ['pl_name', 'sys_name', 'sys_snum', 'sys_pnum', 'st_spectype', 'discoverymethod', 'sy_dist', 'disc_year']
-//     // return {
-//     //     name: d.pl_name,
-//     //     system: d.sys_name,
-//     //     numStars: d.sy_snum,
-//     //     numPlanets: d.sy_pnum,
-//     //     discoveryMethod: d.discoverymethod,
-//     //     distanceFromEarth: d.sy_dist,
-//     //     discoveryYear: d.disc_year,
-//     //     // radius: pl_rade,
-//     //     // mass: pl_bmasse
-//     // }
-//     tabulate(d, columns)
-// }); pl_orbsmax

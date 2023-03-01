@@ -20,6 +20,7 @@ body {
     text-decoration: none;
 }
 
+/* Hover animation for Navbar buttons */
 .navbar a:hover {
     background-color: darkslategray;
 }
@@ -52,6 +53,7 @@ body {
 /* ------------------------------- */
 /* INFORMATION PAGE */
 
+/* Info panel below header */
 .info a {
     background-color: #333;;
 }
@@ -84,8 +86,7 @@ body {
 }
 
 .collapsible:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
     font-size: 13px;
     background-color: #333;
     float: right;
@@ -93,13 +94,13 @@ body {
 }
 
 .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 /* ------------------------------- */
 /* EXOPLANET PAGE */
 
+/* Background color for graphs */
 svg {
     background-color: white;
 }
@@ -137,6 +138,7 @@ svg {
     transition: 0.3s;
 }
 
+/* Sidebar button hover color change */
 .sidebar input:hover, .openbtn:hover, a:hover {
     color: slategray;
 }
@@ -174,15 +176,4 @@ svg {
 #main h3, a {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidebar {
-        padding-top: 15px;
-    }
-
-    .sidebar button {
-        font-size: 18px;
-    }
 }

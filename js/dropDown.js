@@ -1,3 +1,4 @@
+/* Used https://www.w3schools.com/howto/howto_js_collapsible.asp to create event listener for all drop downs*/
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
